@@ -93,10 +93,10 @@ $(document).ready(function () {
         console.log(seconds);
         switch (seconds) {
             case '01':
-                getfirstsubreddit('OnePiece');
+                getfirstsubreddit('LandscapePhotography');
                 break;
-            case '04':
-                getfirstsubreddit('StardustCrusaders');
+            case '05':
+                getfirstsubreddit('aww');
                 break;
             case 10:
                 getfirstsubreddit('pics');
@@ -104,19 +104,19 @@ $(document).ready(function () {
             case 15:
                 getfirstsubreddit('india');
                 break;
-            case 21:
+            case 20:
                 getfirstsubreddit('earthporn');
                 break;
-            case 33:
+            case 30:
                 getfirstsubreddit('Disneyland');
                 break;
-            case 42:
+            case 37:
                 getfirstsubreddit('DontPanic');
                 break;
             case 45:
                 getfirstsubreddit('NintendoSwitch');
                 break;
-            case 55:
+            case 52:
                 getfirstsubreddit('PoliticalHumor');
                 break;
         }
@@ -146,11 +146,14 @@ $(document).ready(function () {
         const render = post => {
 
             const node = document.createElement('div');
+
             node.innerHTML = `
-                    <a href="${post.link}" target="_blank">
-                        <img src="${post.link}"/>
+                    <a id="nodeContain" href="${post.link}" target="_blank">
+                        <img src="${post.link}" alt="${post.title}">
+                        <div class="top-right">${post.title}</div>
                     </a>`;
             app.appendChild(node);
+
         }
     }
 
