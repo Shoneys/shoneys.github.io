@@ -93,10 +93,10 @@ $(document).ready(function () {
         console.log(seconds);
         switch (seconds) {
             case '01':
-                getfirstsubreddit('OnePiece');
+                getfirstsubreddit('LandscapePhotography');
                 break;
             case '04':
-                getfirstsubreddit('StardustCrusaders');
+                getfirstsubreddit('aww');
                 break;
             case 10:
                 getfirstsubreddit('pics');
