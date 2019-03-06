@@ -91,7 +91,7 @@ $(document).ready(function () {
     /*happy thoughts :)*/
     function chooseImage(seconds) {
         console.log(seconds);
-        switch (seconds) {
+         switch (seconds) {
             case '01':
                 getfirstsubreddit('LandscapePhotography');
                 break;
@@ -110,10 +110,10 @@ $(document).ready(function () {
             case 30:
                 getfirstsubreddit('Disneyland');
                 break;
-            case 40:
+            case 37:
                 getfirstsubreddit('DontPanic');
                 break;
-            case 47:
+            case 45:
                 getfirstsubreddit('NintendoSwitch');
                 break;
             case 52:
