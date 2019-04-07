@@ -4,7 +4,6 @@ $(document).ready(function () {
     // Let's set the AM and PM meridiem for 12 hour format instead of 24 hour time
     var meridiem = "AM"; // Default is AM
     var firstcount = 0;
-    var interv = setInterval(pageScroll, 1000);
 
     function displayTime() {
         var currentTime = new Date();
@@ -13,13 +12,11 @@ $(document).ready(function () {
         var seconds = currentTime.getSeconds();
         firstcount++;
 
-        // If the seconds digit is less than ten  (this code from step 8)
         if (seconds < 10) {
             // Add the "0" digit to the front
             // so 9 becomes "09"
             seconds = "0" + seconds;
         }
-        // If the minutes digit is less than ten
         if (minutes < 10) {
             minutes = "0" + minutes;
         }
@@ -28,7 +25,6 @@ $(document).ready(function () {
             hours = "0" + hours;
         }
 
-        //added in Step 9
         // Convert from 24 hour to 12 hour format and keep track of the meridiem.
         if (hours > 12) {
             hours = hours - 12;
@@ -41,11 +37,7 @@ $(document).ready(function () {
 
 
         // This gets a "handle" to the clock div in our HTML
-        var clockDiv = document.getElementById('clock');
-
-        // Then we set the text inside the clock div
-        // to the hours, minutes, and seconds of the current time
-        clockDiv.innerText = hours + ":" + minutes + ":" + seconds + " " + meridiem;
+        var clockDiv = document.getElementById('clock').innerText = hours + ":" + minutes + ":" + seconds + " " + meridiem;
 
         clockPos(seconds);
         if (firstcount < 60) {
@@ -55,15 +47,7 @@ $(document).ready(function () {
             firstcount = 0;
         }
         $("#clock").click(function (e) {
-
-            var pWidth = $(this).innerWidth(); //use .outerWidth() if you want borders
-            var pOffset = $(this).offset();
-            var x = e.pageX - pOffset.left;
-            if (pWidth / 2 > x) {
-                clearInterval(interv);
-            } else {
-                interv;
-            }
+            document.getElementById("nodeContain").outerHTML = "";
         });
     }
 
@@ -75,23 +59,10 @@ $(document).ready(function () {
     }
 
 
-    function pageScroll() {
-        window.scrollBy(0, 1);
-        scrolldelay = setTimeout(pageScroll, 135);
-        window.onscroll = function (ev) {
-            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 'fast');
-            }
-        };
-    }
-
 
     /*happy thoughts :)*/
     function chooseImage(seconds) {
-        console.log(seconds);
-         switch (seconds) {
+        switch (seconds) {
             case '01':
                 getfirstsubreddit('LandscapePhotography');
                 break;
@@ -113,7 +84,7 @@ $(document).ready(function () {
             case 37:
                 getfirstsubreddit('DontPanic');
                 break;
-            case 45:
+            case 42:
                 getfirstsubreddit('NintendoSwitch');
                 break;
             case 52:
@@ -158,7 +129,18 @@ $(document).ready(function () {
     }
 
 
-
     setInterval(displayTime, 1000);
 
+    function pageScroll() {
+        window.scrollBy(0, 1);
+        scrolldelay = setTimeout(pageScroll, 50);
+        window.onscroll = function (ev) {
+            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 'fast');
+            }
+        }
+    }
+    pageScroll();
 });
