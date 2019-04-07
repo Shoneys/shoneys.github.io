@@ -43,7 +43,7 @@ $(document).ready(function () {
         if (firstcount < 60) {
             chooseImage(seconds);
         }
-        if (firstcount >= 600) {
+        else if (firstcount >= 60) {
             firstcount = 0;
         }
         $("#clock").click(function (e) {
