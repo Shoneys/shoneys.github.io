@@ -25,13 +25,13 @@ $(document).ready(function () {
 
 
 
-    document.getElementById("wrap").addEventListener("mouseover", function () {
+document.getElementById("wrap").addEventListener("mouseover", function () {
 
-        mousemoveWrap(true);
-    });
-    document.getElementById("wrap").addEventListener("mouseout", function () {
-        mousemoveWrap(false);
-    });
+    mousemoveWrap(true);
+});
+document.getElementById("wrap").addEventListener("mouseout", function () {
+    mousemoveWrap(false);
+});
 
 
 
@@ -57,26 +57,20 @@ function mousemoveWrap(isOnDiv) {
                 'transform': 'translate3d(' + -offset + 'px,0,0)'
             });
         });
-    }else{
-       console.log(isOnDiv); 
+    } else {
+        console.log(isOnDiv);
     }
 }
 
-//setInterval(listenforMouse, 100);
 
+var map;
 
-
-
-
-
-
-
-/*var map = L.map('map').setView([51.505, -0.09], 13);
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-L.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-    .openPopup();*/
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+            lat: -34.397,
+            lng: 150.644
+        },
+        zoom: 8
+    });
+}

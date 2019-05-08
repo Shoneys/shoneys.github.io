@@ -1,0 +1,12 @@
+{
+    "John1":{
+        "location": [45,32],
+        "name": "John kaynes",
+        "picture": "pictures/john1.jpg"
+    },
+    "Paul1":{
+        "location": [32,54],
+        "name": "Paul smith",
+        "picture": "pictures/paul1.jpg"
+    }
+}
