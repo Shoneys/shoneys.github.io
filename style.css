@@ -24,73 +24,27 @@ body {
     background: linear-gradient(90deg, rgba(255, 239, 0, 1) 0%, rgba(255, 154, 0, 1) 73%, rgba(255, 111, 0, 1) 100%);
 }
 
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 #heading {
+    position: relative;
     opacity: 0.9;
     font-family: herolight;
-    position: absolute;
     text-align: center;
-    top: 1em;
     left: 10%;
     width: 80%;
-    height: 15em;
     background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
-    z-index: 2;
 }
 
 #maincontent h1 {
     font-family: heroheavy;
     margin-bottom: .4em;
-}
-
-
-#wrap {
-    position: absolute;
-    left: 0;
-    top: 15em;
-    width: 400%;
-    height: 50%;
-    display: flex;
-    align-items: stretch;
-    margin: 0% 40%;
-
-}
-
-#hb {
-    position: relative;
-    width: 25%;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    z-index: 2;
-    transform: scale(.97);
-}
-
-.c {
-    position: relative;
-    display: block;
-    max-width: 90%;
-
-}
-
-.c img {
-    position: relative;
-    display: block;
-    width: 100%;
-    z-index: 2;
-}
-
-.txt {
-    font-family: UniverseL;
-    position: absolute;
-    top: 100%;
-    left: 10%;
-    width: 80%;
-    opacity: 0;
-    padding: 1em 0 0 1em;
-    border-left: 1px solid;
-    z-index: 1;
-    transform: scaleY(1) translateY(-1.8em);
-    transition: transform .2s, opacity .5s;
 }
 
 h1 {
@@ -99,50 +53,28 @@ h1 {
     text-transform: uppercase;
 }
 
-#hb:hover .txt {
-    opacity: 1;
-}
-
-.fullBg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: transform .5s, opacity .5s;
-    transform: scale(1);
-    z-index: 1;
-}
-
-.fullBg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    opacity: .5;
-}
-
-#hb:hover + .fullBg {
-    opacity: 1;
-    transform: scale(1.02);
+#inputform {
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    position: flex;
+    top:1em;
+    left: 25%;
+    width: 50%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    background-blend-mode: screen, difference, lighten;
+    background-color: #e5efff;
 }
 
 #map {
-    position: absolute;
+    position: relative;
     height: 30em;
     width: 80%;
-    top: 40em;
+    top: 3em;
     left: 10%;
 }
 
-/* Optional: Makes the sample page fill the window. */
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+
 
 @media (orientation: portrait) {
     #wrap {
