@@ -13,4 +13,5 @@ body {
     text-align: center;
     background-blend-mode: screen, difference, lighten;
     background-color: #e5efff;
+    border-radius: 2em;
 }
