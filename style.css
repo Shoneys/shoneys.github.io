@@ -19,18 +19,10 @@
 }
 
 body {
-    overflow-x: hidden;
-    background: rgb(255, 239, 0);
     background: linear-gradient(90deg, rgba(255, 239, 0, 1) 0%, rgba(255, 154, 0, 1) 73%, rgba(255, 111, 0, 1) 100%);
 }
 
 /* Optional: Makes the sample page fill the window. */
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
 
 #heading {
     position: relative;
@@ -39,7 +31,7 @@ body {
     text-align: center;
     left: 10%;
     width: 80%;
-    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    background-image: linear-gradient(225deg, #E3FDF5 0%, #FFE6FA 100%);
 }
 
 #maincontent h1 {
@@ -52,22 +44,24 @@ h1 {
     font-weight: 700;
     text-transform: uppercase;
 }
-#currentqueue{
-    width:100%;
-    height:20em;
+
+#currentqueue {
+    width: 100%;
+    height: 23em;
 }
 
-#inputform {
-    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
-    position: relative;
-    top:1em;
-    left: 25%;
-    width: 50%;
-    padding-top: 1em;
-    padding-bottom: 1em;
+#signupbuttonouter {
     text-align: center;
-    background-blend-mode: screen, difference, lighten;
-    background-color: #e5efff;
+}
+
+#signupbutton {
+    font-family: heroheavy;
+    font-weight: 1000;
+    padding: 1.5em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    background-image: linear-gradient(225deg, #E3FDF5 0%, #FFE6FA 100%);
+    border-radius: 3em;
 }
 
 #map {

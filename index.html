@@ -5,7 +5,6 @@
     <title>Food Share</title>
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
@@ -19,17 +18,13 @@
 
     <object id="currentqueue" data="CurrentQueue.html"></object>
 
-    <form action="form.php" method="POST" enctype="multipart/form-data" id="inputform">
-        <b>your email address </b><br><input type="text" name="Report1" class="formdata"><br>
-        Necessary Details: <br><textarea type="text" name="Report3" align="left" class="formdata" id="textbox"></textarea><br>
-        <input type="file" name="Reportf" class="formdata" id="OCD"><br>
-        <button type="submit" name="submit">Submit Report</button>
-    </form>
-
+    <div id="signupbuttonouter">
+        <a id="signupbutton" href="signup.html">Sign up <i>NOW!</i></a>
+    </div>
     <div id="map"></div>
     <!-- Replace the value of the key parameter with your own API key. -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuxEUDvimErhBdqYc1oJx1_iTVM4EcRt4&callback=initMap" async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
+
     <script src="main.js"></script>
 </body></html>
