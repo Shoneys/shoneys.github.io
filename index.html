@@ -5,11 +5,14 @@
     <title>Food Share</title>
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
-
+    <!-- Replace the value of the key parameter with your own API key. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuxEUDvimErhBdqYc1oJx1_iTVM4EcRt4&callback=initMap" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
 </head>
 
 <body>
-    <article id="heading">
+    <article class="header">
         <h1>Meet People</h1>
         <h1>Eat Food</h1>
         <h1><i>good times</i></h1>
@@ -21,10 +24,6 @@
     <div id="signupbuttonouter">
         <a id="signupbutton" href="signup.html">Sign up <i>NOW!</i></a>
     </div>
+    
     <div id="map"></div>
-    <!-- Replace the value of the key parameter with your own API key. -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuxEUDvimErhBdqYc1oJx1_iTVM4EcRt4&callback=initMap" async defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script src="main.js"></script>
 </body></html>

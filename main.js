@@ -3,50 +3,6 @@ $(document).ready(function () {
 });
 
 
-
-
-// make css width scales with number of elements
-// make data structure
-
-
-
-/*document.getElementById("wrap").addEventListener("mouseover", function () {
-    mousemoveWrap(true);
-});
-document.getElementById("wrap").addEventListener("mouseout", function () {
-    mousemoveWrap(false);
-});
-
-
-
-function mousemoveWrap(isOnDiv) {
-    if (isOnDiv === true) {
-        console.log(isOnDiv);
-        var docWidth = $('body').width(),
-            $wrap = $('#wrap'),
-            $images = $('#wrap'),
-            slidesWidth = $wrap.width();
-
-        $(window).on('resize', function () {
-            docWidth = $('body').width();
-            slidesWidth = $wrap.width();
-        });
-
-        $("#wrap").mousemove(function (e) {
-            var mouseX = e.pageX,
-                offset = mouseX / docWidth * slidesWidth - mouseX / 2;
-
-            $images.css({
-                '-webkit-transform': 'translate3d(' + -offset + 'px,0,0)',
-                'transform': 'translate3d(' + -offset + 'px,0,0)'
-            });
-        });
-    } else {
-        console.log(isOnDiv);
-    }
-}*/
-
-
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see the error "The Geolocation service
 // failed.", it means you probably did not give permission for the browser to

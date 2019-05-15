@@ -14,14 +14,14 @@ body {
 #slideshow {
     position:relative;
     height: 25em;
-    bottom:12.5em;
+    bottom:9em;
 }
 
 .entire-content {
     margin: auto;
     width: 13.5em;
     perspective: 50em;
-    padding-top: 15em;
+    padding-top: 12em;
 }
 
 .content-carrousel {

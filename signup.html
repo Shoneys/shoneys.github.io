@@ -1,19 +1,25 @@
-<form action="form.php" method="POST" enctype="multipart/form-data" id="inputform">
-        <b>your email address </b><br><input type="text" name="Report1" class="formdata"><br>
-        Necessary Details: <br><textarea type="text" name="Report3" align="left" class="formdata" id="textbox"></textarea><br>
-        <input type="file" name="Reportf" class="formdata" id="OCD"><br>
-        <button type="submit" name="submit">Submit Report</button>
-    </form>
 
-#inputform {
-    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
-    position: relative;
-    top:1em;
-    left: 25%;
-    width: 50%;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    text-align: center;
-    background-blend-mode: screen, difference, lighten;
-    background-color: #e5efff;
-}
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Sign Up!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <form action="form.php" method="POST" enctype="multipart/form-data" id="inputform">
+        <b>Your Email Address </b><br><input type="text" name="Report1" class="formdata"><br>
+        <select name="cars">
+            <option value="null">select a food:</option>
+            <option value="saab">Pizza</option>
+            <option value="sushi">Sushi</option>
+            <option value="tacos">Tacos</option>
+        </select><br><br>
+        <a>Select an image to upload:</a><br>
+        <input type="file" name="Reportf" class="formdata"><br><br>
+        <button type="submit" name="submit">Submit Invite</button>
+    </form>
+</body></html>
+
