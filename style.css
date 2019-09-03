@@ -1,83 +1,19 @@
-@font-face {
-    font-family: herolight;
-    src: url(Fonts/herolight.otf);
-}
-
-@font-face {
-    font-family: heroheavy;
-    src: url(Fonts/Hero.otf);
-}
-
-@font-face {
-    font-family: CustomX;
-    src: url(fonts/CustomX.ttf);
-}
-
-@font-face {
-    font-family: UniverseL;
-    src: url(fonts/UniverseL.ttf);
-}
-
+html,
 body {
-    background: linear-gradient(90deg, rgba(255, 239, 0, 1) 0%, rgba(255, 154, 0, 1) 73%, rgba(255, 111, 0, 1) 100%);
-}
-
-.header {
-    opacity:.9;
-    position: relative;
-    font-family: herolight;
-    text-align: center;
-    left: 10%;
-    width: 80%;
-    background-image: linear-gradient(225deg, #E3FDF5 0%, #FFE6FA 100%);
-    border-radius: 2em;
-}
-
-h1 {
-    font-size: 1.2em;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-#currentqueue {
     width: 100%;
-    height: 23em;
+    height: 100%;
+    margin: -1%;
+    background: rgb(2, 0, 43);
+    background: linear-gradient(0deg, rgba(2, 0, 43, 1) 0%, rgba(0, 0, 120, 1) 12%, rgba(194, 230, 237, 1) 100%);
 }
 
-#signupbuttonouter {
-    text-align: center;
+img {
+    width: 100%;
 }
 
-#signupbutton {
-    text-decoration: none;
-    font-family:fantasy;
-    font-weight: 1000;
-    font-size: 2em;
-    padding: 1em;
-    padding-left: 2.5em;
-    padding-right: 2.5em;
-    background-image: linear-gradient(225deg, #E3FDF5 0%, #FFE6FA 100%);
-    border-radius: 3em;
-}
-
-#map {
-    position: relative;
-    height: 30em;
-    width: 80%;
-    top: 3em;
-    left: 10%;
-    margin-bottom:3em;
-}
-
-
-
-@media (orientation: portrait) {
-    #wrap {
-        top: 14em;
-    }
-
-    #slogan {
-        width: 80%;
-        left: 10%;
+@media (orientation: landscape) {
+    div {
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
