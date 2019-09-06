@@ -34,32 +34,52 @@ function setup() {
         }
     }, 3000);
     setInterval(function () {
-        image(imgs[randomLength()], randomWidth(), randomHeight(), randomWidth(), randomHeight())
+        image(imgs[randomPic()], randomX()-imgs[randomPic()].width, randomY()-imgs[randomPic()].height, ifWidthbigger(imgs[randomPic()]), ifHeightbigger(imgs[randomPic()]))
     }, 5000);
 }
 
 function draw() {
-    ellipse(mouseX, mouseY, 80, 80);
+    
     if (mouseIsPressed) {
         fill(0);
     } else {
         fill(255);
     }
+    ellipse(mouseX, mouseY, 80, 80);
 }
 
-function randomLength() {
+function randomPic() {
     var min = 0;
     var max = picturez.length;
     return Math.floor(Math.random() * (+max - +min)) + +min;;
 }
 
-function randomWidth() {
+function ifWidthbigger(img) {
+    if (img.width > (windowWidth / 2)) {
+        console.log("is biggerX!");
+        return img.width /10;
+    } else {
+        return img.width / 1.5;
+    }
+}
+
+function ifHeightbigger() {
+    if (img.height > (windowHeight / 2)) {
+        console.log("is biggerY!");
+        return img.height /10;
+    } else {
+        return img.height / 1.5;
+    }
+}
+
+
+function randomX() {
     var min = 0;
     var max = windowWidth;
     return Math.floor(Math.random() * (+max - +min)) + +min;;
 }
 
-function randomHeight() {
+function randomY() {
     var min = 0;
     var max = windowHeight;
     return Math.floor(Math.random() * (+max - +min)) + +min;;
