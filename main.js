@@ -34,12 +34,11 @@ function setup() {
         }
     }, 3000);
     setInterval(function () {
-        image(imgs[randomPic()], randomX()-imgs[randomPic()].width, randomY()-imgs[randomPic()].height, ifWidthbigger(imgs[randomPic()]), ifHeightbigger(imgs[randomPic()]))
+        image(imgs[randomPic()], randomX(), randomY(), ifWidthbigger(imgs[randomPic()]), ifHeightbigger(imgs[randomPic()]))
     }, 5000);
 }
 
 function draw() {
-    
     if (mouseIsPressed) {
         fill(0);
     } else {
@@ -57,7 +56,7 @@ function randomPic() {
 function ifWidthbigger(img) {
     if (img.width > (windowWidth / 2)) {
         console.log("is biggerX!");
-        return img.width /10;
+        return img.width / 10;
     } else {
         return img.width / 1.5;
     }
@@ -66,7 +65,7 @@ function ifWidthbigger(img) {
 function ifHeightbigger() {
     if (img.height > (windowHeight / 2)) {
         console.log("is biggerY!");
-        return img.height /10;
+        return img.height / 10;
     } else {
         return img.height / 1.5;
     }
